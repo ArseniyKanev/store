@@ -1,0 +1,13 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @product.title
+p
+  strong Description:
+  = @product.description
+p
+  strong Price:
+  = @product.price
+
+= link_to 'Back', products_path

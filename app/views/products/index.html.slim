@@ -1,0 +1,17 @@
+h1 Listing products
+
+table
+  thead
+    tr
+      th Title
+      th Description
+      th Price
+      th
+
+  tbody
+    - @products.each do |product|
+      tr
+        td = product.title
+        td = product.description
+        td = product.price
+        td = link_to 'Show', product
