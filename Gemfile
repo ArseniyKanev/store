@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
@@ -34,6 +35,8 @@ gem 'devise'
 gem 'slim-rails'
 gem 'bootstrap-sass'
 gem 'faker'
+gem 'rails_12factor'
+gem 'puma'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
