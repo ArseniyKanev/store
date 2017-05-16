@@ -1,0 +1,17 @@
+table
+  thead
+    tr
+      th Title
+      th Price
+      th
+
+  tbody
+    - @cart_products.each do |product|
+      tr
+        td = product.title
+        td.price = product.price
+        td.remove = link_to 'Remove from cart', remove_from_cart_path(product), remote: true, method: :put
+    tr
+      th Total
+      th.total = @total
+      th

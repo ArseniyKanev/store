@@ -10,6 +10,11 @@ nav.navbar.navbar-default
     #user.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         - if signed_in?
+          li
+            = link_to cart_path do
+              span.glyphicon.glyphicon-shopping-cart
+              span.nav_total
+                = current_user.cart.total_price
           li = link_to current_user.email, edit_user_registration_path
           li = link_to "Logout", destroy_user_session_path, method: :delete
         - else
