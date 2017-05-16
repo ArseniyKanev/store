@@ -14,7 +14,8 @@ nav.navbar.navbar-default
             = link_to cart_path do
               span.glyphicon.glyphicon-shopping-cart
               span.nav_total
-                = current_user.cart.total_price
+                = current_user.cart.try(:total_price)
+          li = link_to "Orders", orders_path
           li = link_to current_user.email, edit_user_registration_path
           li = link_to "Logout", destroy_user_session_path, method: :delete
         - else

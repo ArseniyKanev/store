@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @cart_action = current_user.cart ? (current_user.cart.products.include?(@product) ? "Remove from cart" : "Add to cart") : "Add to cart"
+    @cart_action = current_user.try(:cart) ? (current_user.cart.products.include?(@product) ? "Remove from cart" : "Add to cart") : "Add to cart"
   end
 
   private

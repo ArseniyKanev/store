@@ -1,0 +1,11 @@
+table
+  thead
+    tr
+      th ID
+      th Products
+
+  tbody
+    - @orders.each do |order|
+      tr
+        td = order.id
+        td = order.products.map(&:title).join(", ")
